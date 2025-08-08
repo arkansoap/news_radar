@@ -4,6 +4,7 @@ from datetime import datetime, timezone
 from playwright.sync_api import sync_playwright
 
 
+# TODO Gestion proxies - voir fin de conv GPT "compléter CRUD ... "
 def get_tweets(username: str, limit: int = 10):
     tweets = []
     url = f"https://x.com/{username}"
