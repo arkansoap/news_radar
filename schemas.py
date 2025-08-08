@@ -11,11 +11,11 @@ class NewsRadarXPostBase(BaseModel):
     date: datetime.datetime
 
 
-class YouTubeFeedEntryWrite(NewsRadarXPostBase):
+class NewsRadarXPostWrite(NewsRadarXPostBase):
     pass
 
 
-class YouTubeFeedEntryRead(NewsRadarXPostBase):
+class NewsRadarXPostRead(NewsRadarXPostBase):
     id: int
 
     class Config:
