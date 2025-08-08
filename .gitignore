@@ -2,3 +2,4 @@
 .env.prod
 /venv
 /dist
+*/pycache
