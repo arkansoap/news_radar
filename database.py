@@ -7,10 +7,7 @@ env.read_env()
 
 
 def get_engine():
-    if env.str("ENV") == "dev":
-        url = f'{env("DATABASE")}://{env.str("DB_USER")}:{env.str("DB_PWD")}@{env.str("DB_HOST")}:{env("DB_PORT")}/{env.str("DB")}'
-    else:
-        url = env.str("DATABASE_URL")
+    url = f'{env("DATABASE")}://{env.str("DB_USER")}:{env.str("DB_PWD")}@{env.str("DB_HOST")}:{env("DB_PORT")}/{env.str("DB")}'
     engine = create_engine(url=url)
     return engine
 
