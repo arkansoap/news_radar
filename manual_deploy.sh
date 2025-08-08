@@ -9,7 +9,7 @@ echo "Starting Manual Deploy"
 sleep 1
 
 rm -rf dist
-git clone git@github.com:ReworldMedia/news_radar.git dist/
+git clone git@github.com:arkansoap/news_radar.git dist/
 rm -rf dist/.git
 cp -f .env.prod dist/.env || exit
 
