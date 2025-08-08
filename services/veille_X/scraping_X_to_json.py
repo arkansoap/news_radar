@@ -54,7 +54,7 @@ def get_tweets(username: str, limit: int = 10):
                             tweets.append(
                                 {
                                     "username": username,
-                                    "text": full_text,
+                                    "text_": full_text,
                                     "link": f"https://x.com/{username}/status/{tweet_id}",
                                     "date": dt.isoformat(),
                                 }

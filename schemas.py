@@ -6,7 +6,7 @@ import json
 
 class NewsRadarXPostBase(BaseModel):
     username: str
-    text: str
+    text_: str
     link: str
     date: datetime.datetime
 

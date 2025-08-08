@@ -12,7 +12,7 @@ class NewsRadarXPost(Base):
 
     id = mapped_column(BIGINT(20), primary_key=True)
     username = mapped_column(String(255), nullable=False)
-    text_ = mapped_column("text", Text, nullable=False)
+    text_ = mapped_column(Text, nullable=False)
     link = mapped_column(String(255), nullable=False)
     date = mapped_column(
         TIMESTAMP,
