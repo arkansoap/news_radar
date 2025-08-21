@@ -2,16 +2,26 @@ import email.utils
 import json
 from datetime import datetime, timezone
 from playwright.sync_api import sync_playwright
+from environs import Env
+
+env = Env()
+env.read_env()
 
 
-# TODO Gestion proxies - voir fin de conv GPT "compléter CRUD ... "
 def get_tweets(username: str, limit: int = 10):
     tweets = []
     url = f"https://x.com/{username}"
 
+    # Proxy fourni par ton service de rotation
+    PROXY = {
+        "server": env.str("PROXY_SERVER"),
+        "username": env.str("PROXY_USER"),
+        "password": env.str("PROXY_PWD"),
+    }
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
-        context = browser.new_context()
+        context = browser.new_context(proxy=PROXY)  # 👈 ajout proxy ici
         page = context.new_page()
 
         def handle_response(response):
