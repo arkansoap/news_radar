@@ -1,3 +1,8 @@
+"""
+## Usage
+python -m veille_x
+"""
+
 import argparse
 from rich.console import Console
 from sqlalchemy.orm import Session

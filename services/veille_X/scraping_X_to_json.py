@@ -15,7 +15,7 @@ def get_tweets(username: str, limit: int = 10):
     # Proxy fourni par ton service de rotation
     PROXY = {
         "server": env.str("PROXY_SERVER"),
-        "username": env.str("PROXY_USER"),
+        "username": env.str("PROXY_USERNAME"),
         "password": env.str("PROXY_PWD"),
     }
 
