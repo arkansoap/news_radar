@@ -22,4 +22,5 @@
 # 
 # m h  dom mon dow   command
 
-*/30 * * * * /home/news_radar/venv/bin/python -m veille_x >> /home/news_radar/cron.log 2>&1
+*/30 * * * * cd /home/news_radar && /home/news_radar/venv/bin/python -m crawlers.veille_x >> /home/news_radar/cron.log 2>&1
+
